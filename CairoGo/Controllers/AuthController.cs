@@ -117,6 +117,7 @@ namespace CairoGo.Controllers
             user.RefreshToken = refreshToken;
             user.RefreshTokenExpiry = DateTime.UtcNow.AddDays(7);
             var updateResult = await _userRepo.UpdateAsync(user);
+
             if (!updateResult.Succeeded)
             {
                 return StatusCode(500, new ApiResponse<object>
@@ -125,24 +126,21 @@ namespace CairoGo.Controllers
                     Message = "Failed to save refresh token"
                 });
             }
-
-
-
             return Ok(new ApiResponse<object>
             {
                 Success = true,
                 Message = "Login successful",
                 Data = new
                 {
-                    Token = token,
-                    ExpiresIn = expiresInMinutes * 60,
-                    RefreshToken = refreshToken,
-                    RefreshTokenExpiry = user.RefreshTokenExpiry,
                     User = new
                     {
                         user.Id,
                         user.FullName,
-                        user.Email
+                        user.Email,
+                        AccessToken = token,
+                        ExpiresIn = expiresInMinutes * 60,
+                        RefreshToken = refreshToken,
+                        RefreshTokenExpiry = user.RefreshTokenExpiry
                     }
                 }
             });
@@ -196,47 +194,6 @@ namespace CairoGo.Controllers
                     Errors = new List<string> { ex.Message }
                 });
             }
-        }
-        [HttpPost("refresh-token")]
-        public async Task<IActionResult> RefreshToken([FromBody] RefreshRequestDto request)
-        {
-            if (string.IsNullOrEmpty(request?.RefreshToken))
-                return BadRequest(new ApiResponse<object> { Success = false, Message = "Refresh token is required" });
-
-            var user = await _userRepo.GetByRefreshTokenAsync(request.RefreshToken);
-
-            if (user == null || user.RefreshTokenExpiry == null || user.RefreshTokenExpiry < DateTime.UtcNow)
-            {
-                return Unauthorized(new ApiResponse<object>
-                {
-                    Success = false,
-                    Message = "Invalid or expired refresh token"
-                });
-            }
-
-            // Generate new access token
-            var newAccessToken = _jwtRepo.GenerateToken(user);
-
-            // Optionally: rotate refresh token (recommended)
-            var newRefreshToken = _jwtRepo.GenerateRefreshToken();
-            user.RefreshToken = newRefreshToken;
-            user.RefreshTokenExpiry = DateTime.UtcNow.AddDays(7);
-            await _userRepo.UpdateAsync(user);
-
-            var expiresInMinutes = int.Parse(_config["Jwt:DurationInMinutes"] ?? "120");
-
-            return Ok(new ApiResponse<object>
-            {
-                Success = true,
-                Message = "Token refreshed successfully",
-                Data = new
-                {
-                    Token = newAccessToken,
-                    ExpiresIn = expiresInMinutes * 60,
-                    RefreshToken = newRefreshToken,
-                    RefreshTokenExpiry = user.RefreshTokenExpiry
-                }
-            });
         }
     }
 }
