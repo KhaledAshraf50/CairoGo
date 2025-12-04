@@ -109,7 +109,24 @@ namespace CairoGo.Controllers
                 });
 
             var token = _jwtRepo.GenerateToken(user);
+
             var expiresInMinutes = int.Parse(_config["Jwt:DurationInMinutes"] ?? "120");
+
+            // Generate Refresh Token
+            var refreshToken = _jwtRepo.GenerateRefreshToken();
+            user.RefreshToken = refreshToken;
+            user.RefreshTokenExpiry = DateTime.UtcNow.AddDays(7);
+            var updateResult = await _userRepo.UpdateAsync(user);
+            if (!updateResult.Succeeded)
+            {
+                return StatusCode(500, new ApiResponse<object>
+                {
+                    Success = false,
+                    Message = "Failed to save refresh token"
+                });
+            }
+
+
 
             return Ok(new ApiResponse<object>
             {
@@ -118,7 +135,9 @@ namespace CairoGo.Controllers
                 Data = new
                 {
                     Token = token,
-                    ExpiresIn = expiresInMinutes * 60, // in seconds
+                    ExpiresIn = expiresInMinutes * 60,
+                    RefreshToken = refreshToken,
+                    RefreshTokenExpiry = user.RefreshTokenExpiry,
                     User = new
                     {
                         user.Id,
@@ -127,6 +146,7 @@ namespace CairoGo.Controllers
                     }
                 }
             });
+
         }
         [HttpGet("me")]
         [Authorize]
@@ -178,20 +198,31 @@ namespace CairoGo.Controllers
             }
         }
         [HttpPost("refresh-token")]
-        [Authorize]
-        public async Task<IActionResult> RefreshToken()
+        public async Task<IActionResult> RefreshToken([FromBody] RefreshRequestDto request)
         {
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
-            var user = await _userRepo.GetByIdAsync(Guid.Parse(userId));
+            if (string.IsNullOrEmpty(request?.RefreshToken))
+                return BadRequest(new ApiResponse<object> { Success = false, Message = "Refresh token is required" });
 
-            if (user == null)
+            var user = await _userRepo.GetByRefreshTokenAsync(request.RefreshToken);
+
+            if (user == null || user.RefreshTokenExpiry == null || user.RefreshTokenExpiry < DateTime.UtcNow)
+            {
                 return Unauthorized(new ApiResponse<object>
                 {
                     Success = false,
-                    Message = "User not found"
+                    Message = "Invalid or expired refresh token"
                 });
+            }
 
-            var token = _jwtRepo.GenerateToken(user);
+            // Generate new access token
+            var newAccessToken = _jwtRepo.GenerateToken(user);
+
+            // Optionally: rotate refresh token (recommended)
+            var newRefreshToken = _jwtRepo.GenerateRefreshToken();
+            user.RefreshToken = newRefreshToken;
+            user.RefreshTokenExpiry = DateTime.UtcNow.AddDays(7);
+            await _userRepo.UpdateAsync(user);
+
             var expiresInMinutes = int.Parse(_config["Jwt:DurationInMinutes"] ?? "120");
 
             return Ok(new ApiResponse<object>
@@ -200,8 +231,10 @@ namespace CairoGo.Controllers
                 Message = "Token refreshed successfully",
                 Data = new
                 {
-                    Token = token,
-                    ExpiresIn = expiresInMinutes * 60
+                    Token = newAccessToken,
+                    ExpiresIn = expiresInMinutes * 60,
+                    RefreshToken = newRefreshToken,
+                    RefreshTokenExpiry = user.RefreshTokenExpiry
                 }
             });
         }

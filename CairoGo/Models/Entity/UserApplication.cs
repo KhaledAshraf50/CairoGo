@@ -34,17 +34,21 @@
             [RegularExpression(@"^[A-Z]{3}$", ErrorMessage = "Currency must be 3 uppercase letters (e.g., EGP, USD)")]
             public string? PreferredCurrency { get; set; } = "EGP";
 
-            // Settings
-            //public bool DarkModeEnabled { get; set; } = false;
-            //[MaxLength(50)]
-            //public string? StartupOption { get; set; } = "home"; // "home", "last-trip", "recommendations"
+            public string? RefreshToken { get; set; }
+            public DateTime? RefreshTokenExpiry { get; set; }
 
-            //[MaxLength(50)]
-            //public string DefaultHomeView { get; set; } = "current-trips"; // "current-trips", "recommendations", "favorites
-                                                                       
-        
-            // Navigation Properties
-            public PreferenceProfile? PreferenceProfile { get; set; }
+
+        // Settings
+        //public bool DarkModeEnabled { get; set; } = false;
+        //[MaxLength(50)]
+        //public string? StartupOption { get; set; } = "home"; // "home", "last-trip", "recommendations"
+
+        //[MaxLength(50)]
+        //public string DefaultHomeView { get; set; } = "current-trips"; // "current-trips", "recommendations", "favorites
+
+
+        // Navigation Properties
+        public PreferenceProfile? PreferenceProfile { get; set; }
             public ICollection<TripPlan> TripPlans { get; set; } = new List<TripPlan>();
             public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
             public ICollection<Interaction> Interactions { get; set; } = new List<Interaction>();

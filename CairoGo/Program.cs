@@ -98,7 +98,7 @@ namespace CairoGo
                 options.AddPolicy("AllowFrontend", policy =>
                 {
                     policy.WithOrigins(
-                            "https://mega-project-eta.vercel.app", //  No trailing slash!
+                            "https://mega-project-eta.vercel.app", //  frontend
                             "http://localhost:3000",
                             "http://localhost:5173"  // Vite default
                         )

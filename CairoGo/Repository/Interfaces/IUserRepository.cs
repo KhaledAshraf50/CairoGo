@@ -9,5 +9,8 @@ namespace CairoGo.Repository.Interfaces
         Task<UserApplication> GetByIdAsync(Guid id);
         Task<IdentityResult> CreateAsync(UserApplication user, string password);
         Task<bool> CheckPasswordAsync(UserApplication user, string password);
+        Task<UserApplication?> GetByRefreshTokenAsync(string refreshToken);
+        Task<IdentityResult> UpdateAsync(UserApplication user);
+
     }
 }

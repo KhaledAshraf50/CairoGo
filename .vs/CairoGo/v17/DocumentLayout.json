@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|solutionrelative:cairogo\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\dtos\\userdto\\refreshrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|solutionrelative:cairogo\\dtos\\userdto\\refreshrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\repository\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|solutionrelative:cairogo\\repository\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\repository\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|solutionrelative:cairogo\\repository\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\repository\\interfaces\\ijwttokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|solutionrelative:cairogo\\repository\\interfaces\\ijwttokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\repository\\implementations\\jwttokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|solutionrelative:cairogo\\repository\\implementations\\jwttokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Migrations\\20251204091733_addRefreshToken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CairoGo\\Migrations\\20251204091733_addRefreshToken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\models\\entity\\userapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|solutionrelative:cairogo\\models\\entity\\userapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|solutionrelative:cairogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\controllers\\favoritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|solutionrelative:cairogo\\controllers\\favoritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,14 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\controllers\\placescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|solutionrelative:cairogo\\controllers\\placescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|solutionrelative:cairogo\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|solutionrelative:cairogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B771271B-2690-4E64-8D1C-E15E724292C2}|CairoGo\\CairoGo.csproj|d:\\depi\\depi_nontec\\cairogo1\\cairogo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -90,35 +118,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TripSlotController.cs",
-              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\TripSlotController.cs",
-              "RelativeDocumentMoniker": "CairoGo\\Controllers\\TripSlotController.cs",
-              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\TripSlotController.cs",
-              "RelativeToolTip": "CairoGo\\Controllers\\TripSlotController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RefreshRequestDto.cs",
+              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\DTOs\\UserDTO\\RefreshRequestDto.cs",
+              "RelativeDocumentMoniker": "CairoGo\\DTOs\\UserDTO\\RefreshRequestDto.cs",
+              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\DTOs\\UserDTO\\RefreshRequestDto.cs",
+              "RelativeToolTip": "CairoGo\\DTOs\\UserDTO\\RefreshRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T14:33:33.567Z"
+              "WhenOpened": "2025-12-04T09:36:12.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Repository\\Implementations\\UserRepository.cs",
+              "RelativeDocumentMoniker": "CairoGo\\Repository\\Implementations\\UserRepository.cs",
+              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Repository\\Implementations\\UserRepository.cs",
+              "RelativeToolTip": "CairoGo\\Repository\\Implementations\\UserRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:25:34.059Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TripDayController.cs",
-              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\TripDayController.cs",
-              "RelativeDocumentMoniker": "CairoGo\\Controllers\\TripDayController.cs",
-              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\TripDayController.cs",
-              "RelativeToolTip": "CairoGo\\Controllers\\TripDayController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Repository\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "CairoGo\\Repository\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Repository\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "CairoGo\\Repository\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T14:33:23.521Z"
+              "WhenOpened": "2025-12-04T09:21:36.355Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "IJwtTokenRepository.cs",
+              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Repository\\Interfaces\\IJwtTokenRepository.cs",
+              "RelativeDocumentMoniker": "CairoGo\\Repository\\Interfaces\\IJwtTokenRepository.cs",
+              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Repository\\Interfaces\\IJwtTokenRepository.cs",
+              "RelativeToolTip": "CairoGo\\Repository\\Interfaces\\IJwtTokenRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:18:38.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20251204091733_addRefreshToken.cs",
+              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Migrations\\20251204091733_addRefreshToken.cs",
+              "RelativeDocumentMoniker": "CairoGo\\Migrations\\20251204091733_addRefreshToken.cs",
+              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Migrations\\20251204091733_addRefreshToken.cs",
+              "RelativeToolTip": "CairoGo\\Migrations\\20251204091733_addRefreshToken.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:17:33.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "CairoGo\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "CairoGo\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAANQAAAAAAAAAAAAcwOUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T14:22:01.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JwtTokenRepository.cs",
+              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Repository\\Implementations\\JwtTokenRepository.cs",
+              "RelativeDocumentMoniker": "CairoGo\\Repository\\Implementations\\JwtTokenRepository.cs",
+              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Repository\\Implementations\\JwtTokenRepository.cs",
+              "RelativeToolTip": "CairoGo\\Repository\\Implementations\\JwtTokenRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:05:36.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserApplication.cs",
+              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Models\\Entity\\UserApplication.cs",
+              "RelativeDocumentMoniker": "CairoGo\\Models\\Entity\\UserApplication.cs",
+              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Models\\Entity\\UserApplication.cs",
+              "RelativeToolTip": "CairoGo\\Models\\Entity\\UserApplication.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA5wCQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:16:23.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "SearchSessionController.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\SearchSessionController.cs",
               "RelativeDocumentMoniker": "CairoGo\\Controllers\\SearchSessionController.cs",
@@ -130,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "FavoritesController.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\FavoritesController.cs",
               "RelativeDocumentMoniker": "CairoGo\\Controllers\\FavoritesController.cs",
@@ -138,12 +246,11 @@
               "RelativeToolTip": "CairoGo\\Controllers\\FavoritesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T21:03:55.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T21:03:55.847Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "ActivityTypeController.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\ActivityTypeController.cs",
               "RelativeDocumentMoniker": "CairoGo\\Controllers\\ActivityTypeController.cs",
@@ -155,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "InteractionsController.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\InteractionsController.cs",
               "RelativeDocumentMoniker": "CairoGo\\Controllers\\InteractionsController.cs",
@@ -167,7 +274,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Program.cs",
+              "RelativeDocumentMoniker": "CairoGo\\Program.cs",
+              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Program.cs",
+              "RelativeToolTip": "CairoGo\\Program.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAQwGQAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T20:46:15.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TripDayController.cs",
+              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\TripDayController.cs",
+              "RelativeDocumentMoniker": "CairoGo\\Controllers\\TripDayController.cs",
+              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\TripDayController.cs",
+              "RelativeToolTip": "CairoGo\\Controllers\\TripDayController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T14:33:23.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TripSlotController.cs",
+              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\TripSlotController.cs",
+              "RelativeDocumentMoniker": "CairoGo\\Controllers\\TripSlotController.cs",
+              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\TripSlotController.cs",
+              "RelativeToolTip": "CairoGo\\Controllers\\TripSlotController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T14:33:33.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "TripPlaneController.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\TripPlaneController.cs",
               "RelativeDocumentMoniker": "CairoGo\\Controllers\\TripPlaneController.cs",
@@ -179,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
               "Title": "PreferenceController.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\PreferenceController.cs",
               "RelativeDocumentMoniker": "CairoGo\\Controllers\\PreferenceController.cs",
@@ -191,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "ReviewsController.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\ReviewsController.cs",
               "RelativeDocumentMoniker": "CairoGo\\Controllers\\ReviewsController.cs",
@@ -203,19 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "CairoGo\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "CairoGo\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T14:22:01.193Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\appsettings.json",
               "RelativeDocumentMoniker": "CairoGo\\appsettings.json",
@@ -227,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "DataSeeder.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Data\\DataSeeder.cs",
               "RelativeDocumentMoniker": "CairoGo\\Data\\DataSeeder.cs",
@@ -239,19 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Program.cs",
-              "RelativeDocumentMoniker": "CairoGo\\Program.cs",
-              "ToolTip": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Program.cs",
-              "RelativeToolTip": "CairoGo\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T20:46:15.314Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "PlacesController.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\PlacesController.cs",
               "RelativeDocumentMoniker": "CairoGo\\Controllers\\PlacesController.cs",
@@ -263,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "DataSeederController.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\DataSeederController.cs",
               "RelativeDocumentMoniker": "CairoGo\\Controllers\\DataSeederController.cs",
@@ -275,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "20251130120949_UpdateWepsiteAndImageUrlPRop.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Migrations\\20251130120949_UpdateWepsiteAndImageUrlPRop.cs",
               "RelativeDocumentMoniker": "CairoGo\\Migrations\\20251130120949_UpdateWepsiteAndImageUrlPRop.cs",
@@ -287,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "Place.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Models\\Entity\\Place.cs",
               "RelativeDocumentMoniker": "CairoGo\\Models\\Entity\\Place.cs",
@@ -299,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "RecommendationLogsController.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\RecommendationLogsController.cs",
               "RelativeDocumentMoniker": "CairoGo\\Controllers\\RecommendationLogsController.cs",
@@ -311,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "TrendingTagsController.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\TrendingTagsController.cs",
               "RelativeDocumentMoniker": "CairoGo\\Controllers\\TrendingTagsController.cs",
@@ -323,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "ModelVersionsController.cs",
               "DocumentMoniker": "D:\\DEPI\\Depi_nonTec\\CairoGo1\\CairoGo\\Controllers\\ModelVersionsController.cs",
               "RelativeDocumentMoniker": "CairoGo\\Controllers\\ModelVersionsController.cs",

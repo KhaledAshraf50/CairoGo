@@ -5,5 +5,7 @@ namespace CairoGo.Repository.Interfaces
     public interface IJwtTokenRepository
     {
         string GenerateToken(UserApplication user);
+        public string GenerateRefreshToken();
+
     }
 }
