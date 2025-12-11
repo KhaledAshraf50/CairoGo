@@ -67,7 +67,6 @@ namespace CairoGo
                     ),
                     ClockSkew = TimeSpan.Zero // Remove 5 minute default tolerance
                 };
-
                 // Handle authentication failures
                 options.Events = new JwtBearerEvents
                 {
@@ -100,7 +99,8 @@ namespace CairoGo
                     policy.WithOrigins(
                             "https://mega-project-eta.vercel.app", //  frontend
                             "http://localhost:3000",
-                            "http://localhost:5173"  // Vite default
+                            "http://localhost:5173",
+                            "http://127.0.0.1:5500/Form_Js/index.html"// Vite default
                         )
                         .AllowAnyMethod()
                         .AllowAnyHeader()
@@ -169,6 +169,12 @@ namespace CairoGo
                         Array.Empty<string>()
                     }
                 });
+            });
+            builder.Services.AddHttpClient<IMLRecommenderService, MLRecommenderService>(client =>
+            {
+                var mlApiBaseUrl = builder.Configuration["MLApi:BaseUrl"] ?? "http://localhost:8000";
+                client.BaseAddress = new Uri(mlApiBaseUrl);
+                client.Timeout = TimeSpan.FromSeconds(30);
             });
             var app = builder.Build();
 
