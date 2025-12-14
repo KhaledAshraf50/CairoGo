@@ -18,9 +18,12 @@ namespace CairoGo.Mappings
             // 3. Budget (نحوله لـ CostTier text)
             string costTier = profile.Budget switch
             {
-                <= 300 => "Low",
-                <= 1000 => "Medium",
-                _ => "High"
+                //<= 300 => "Low",
+                //<= 1000 => "Medium",
+                //_ => "High"
+                <= 500 => "Budget",
+                <= 2000 => "Mid",
+                _ => "Luxury"
             };
             answers.Add(costTier);
 
@@ -41,7 +44,7 @@ namespace CairoGo.Mappings
             {
                 Name = mlRec.Name,
                 Category = mlRec.Category,
-                Score = mlRec.Score
+                Final_Score = mlRec.Final_Score
             };
         }
 

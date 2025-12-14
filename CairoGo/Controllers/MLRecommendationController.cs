@@ -4,12 +4,12 @@ using CairoGo.Models.Entity;
 using CairoGo.Repository.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
 
 namespace CairoGo.Controllers
 {
     [Route("api/ml-recommendations")]
     [ApiController]
-    [Authorize]
     public class MLRecommendationController : ControllerBase
     {
         private readonly IMLRecommenderService _mlService;
@@ -31,7 +31,11 @@ namespace CairoGo.Controllers
             _recLogRepo = recLogRepo;
             _logger = logger;
         }
+
+        // يجيب Preference Profile بتاع اليوزر ويبعته للـ ML ويرجع Recommendations
+
         [HttpPost("generate")]
+        [Authorize]
         public async Task<IActionResult> GenerateRecommendations([FromBody] GenerateRecommendationsRequestDto dto)
         {
             try
@@ -76,10 +80,11 @@ namespace CairoGo.Controllers
             }
         }
 
-        /// <summary>
-        /// يرسل feedback للـ ML (click, bookmark, view)
-        /// </summary>
+    
+        // يرسل feedback للـ ML (click, bookmark, view)
+
         [HttpPost("feedback")]
+        [Authorize]
         public async Task<IActionResult> SendFeedback([FromBody] MLFeedbackInputDto dto)
         {
             try
@@ -114,46 +119,43 @@ namespace CairoGo.Controllers
             }
         }
 
-        /// <summary>
-        /// يعمل Itinerary كامل من الـ ML
-        /// </summary>
-        [HttpPost("itinerary")]
-        public async Task<IActionResult> CreateItinerary([FromBody] MLItineraryRequestDto dto)
+    
+        // يولد 4 خطط بديلة (Alternative Plans) من الـ ML
+        // الـ ML بيستخدم عدد الأيام اللي اتحفظ من الكويز
+ 
+        [HttpPost("plans/generate")]
+        [Authorize]
+        public async Task<IActionResult> GenerateAlternativePlans()
         {
             try
             {
-                if (dto.Days < 1 || dto.Days > 30)
-                    return BadRequest(new { message = "Days must be between 1 and 30" });
+                _logger.LogInformation("Generating alternative plans from ML");
 
-                _logger.LogInformation($"Creating itinerary for {dto.Days} days");
+                // ابعت للـ ML (مش محتاج parameters - الـ ML بيستخدم stored data)
+                var plans = await _mlService.GenerateAlternativePlansAsync();
 
-                // ابعت للـ ML
-                var itinerary = await _mlService.CreateItineraryAsync(dto.Days);
-
-                if (itinerary == null || !itinerary.Any())
+                if (plans == null || !plans.Any())
                     return Ok(new
                     {
-                        message = "No itinerary generated",
-                        itinerary = new Dictionary<string, List<MLDayPlaceDto>>()
+                        message = "No plans generated. Make sure recommendations were generated first.",
+                        plans = new Dictionary<string, List<MLPlanPlaceDto>>()
                     });
 
                 return Ok(new
                 {
-                    message = "Itinerary created successfully",
-                    totalDays = itinerary.Count,
-                    itinerary
+                    message = "Alternative plans generated successfully",
+                    totalPlans = plans.Count,
+                    plans
                 });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Error creating itinerary for {dto.Days} days");
+                _logger.LogError(ex, "Error generating alternative plans");
                 return StatusCode(500, new { message = $"Internal Server Error: {ex.Message}" });
             }
         }
 
-        /// <summary>
-        /// Helper method: يحفظ Recommendations في الـ Database (Optional)
-        /// </summary>
+        // Helper method: يحفظ Recommendations في الـ Database (Optional)
         private async Task SaveRecommendationLogs(Guid userId, List<MLRecommendationDto> recommendations)
         {
             try
@@ -170,8 +172,8 @@ namespace CairoGo.Controllers
                         {
                             UserId = userId,
                             PlaceId = place.PlaceId,
-                            ModelVersion = "ML_Python_v1.0",
-                            Score = rec.Score,
+                            ModelVersion = "ML_Python_v2.0",
+                            Score = rec.Final_Score,
                             WasShown = false,
                             WasClicked = false,
                             WasBooked = false

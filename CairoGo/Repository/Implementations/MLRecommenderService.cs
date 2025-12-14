@@ -5,10 +5,11 @@ using System.Text.Json;
 
 namespace CairoGo.Repository.Implementations
 {
-    public class MLRecommenderService: IMLRecommenderService
+    public class MLRecommenderService : IMLRecommenderService
     {
         private readonly HttpClient _httpClient;
         private readonly ILogger<MLRecommenderService> _logger;
+
         public MLRecommenderService(HttpClient httpClient, ILogger<MLRecommenderService> logger)
         {
             _httpClient = httpClient;
@@ -27,7 +28,8 @@ namespace CairoGo.Repository.Implementations
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    _logger.LogError($"ML API returned {response.StatusCode}");
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    _logger.LogError($"ML API returned {response.StatusCode}: {errorContent}");
                     return new List<MLRecommendationDto>();
                 }
 
@@ -43,6 +45,7 @@ namespace CairoGo.Repository.Implementations
                 return new List<MLRecommendationDto>();
             }
         }
+
         public async Task<List<MLRecommendationDto>> UpdateWithFeedbackAsync(string placeName, string action)
         {
             try
@@ -59,7 +62,8 @@ namespace CairoGo.Repository.Implementations
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    _logger.LogError($"ML API returned {response.StatusCode}");
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    _logger.LogError($"ML API returned {response.StatusCode}: {errorContent}");
                     return new List<MLRecommendationDto>();
                 }
 
@@ -75,34 +79,36 @@ namespace CairoGo.Repository.Implementations
                 return new List<MLRecommendationDto>();
             }
         }
-        public async Task<Dictionary<string, List<MLDayPlaceDto>>> CreateItineraryAsync(int days)
+
+        public async Task<Dictionary<string, List<MLPlanPlaceDto>>> GenerateAlternativePlansAsync()
         {
             try
             {
-                var requestBody = new MLItineraryRequestDto { Days = days };
-                var json = JsonSerializer.Serialize(requestBody);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                // POST request with empty body - ML uses stored trip days from quiz
+                var content = new StringContent("{}", Encoding.UTF8, "application/json");
 
-                var response = await _httpClient.PostAsync("/plan/create", content);
+                var response = await _httpClient.PostAsync("/plan/generate", content);
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    _logger.LogError($"ML API returned {response.StatusCode}");
-                    return new Dictionary<string, List<MLDayPlaceDto>>();
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    _logger.LogError($"ML API returned {response.StatusCode}: {errorContent}");
+                    return new Dictionary<string, List<MLPlanPlaceDto>>();
                 }
 
                 var responseJson = await response.Content.ReadAsStringAsync();
-                var itinerary = JsonSerializer.Deserialize<Dictionary<string, List<MLDayPlaceDto>>>(responseJson,
+                _logger.LogInformation($"ML Plans Response: {responseJson}");
+
+                var plans = JsonSerializer.Deserialize<Dictionary<string, List<MLPlanPlaceDto>>>(responseJson,
                     new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-                return itinerary ?? new Dictionary<string, List<MLDayPlaceDto>>();
+                return plans ?? new Dictionary<string, List<MLPlanPlaceDto>>();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error calling ML itinerary API");
-                return new Dictionary<string, List<MLDayPlaceDto>>();
+                _logger.LogError(ex, "Error calling ML generate plans API");
+                return new Dictionary<string, List<MLPlanPlaceDto>>();
             }
         }
-
     }
 }
